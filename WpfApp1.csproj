@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net452</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>WpfApp1.App</StartupObject>
+    <LangVersion>preview</LangVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <ApplicationIcon>image\visibility.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="image\arrow-left.png" />
+    <None Remove="image\beautiful_image\Edit\icons8-edit-120.png" />
+    <None Remove="image\beautiful_image\Eye\icons8-eye-96.png" />
+    <None Remove="image\beautiful_image\icons8-arrowleft-91.png" />
+    <None Remove="image\beautiful_image\Logout\icons8-logout-80.png" />
+    <None Remove="image\beautiful_image\Plus\icons8-plus-+-120.png" />
+    <None Remove="image\beautiful_image\Print\icons8-print-80.png" />
+    <None Remove="image\beautiful_image\Refresh\icons8-refresh-150.png" />
+    <None Remove="image\beautiful_image\Search\icons8-search-240.png" />
+    <None Remove="image\close.png" />
+    <None Remove="image\eye.png" />
+    <None Remove="image\file-edit.png" />
+    <None Remove="image\login.png" />
+    <None Remove="image\logo.ico" />
+    <None Remove="image\logo.jpg" />
+    <None Remove="image\logout.png" />
+    <None Remove="image\new_logo.jpeg" />
+    <None Remove="image\plus-box.png" />
+    <None Remove="image\printer.png" />
+    <None Remove="image\refresh.png" />
+    <None Remove="image\search.png" />
+    <None Remove="verf.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\visibility.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.15.0" />
+    <PackageReference Include="FireSharp" Version="2.0.4" />
+    <PackageReference Include="iTextSharp" Version="5.5.0" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net45" Version="1.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1000" />
+    <PackageReference Include="OwinRequestScopeContext" Version="1.0.1" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\arrow-left.png" />
+    <Resource Include="image\beautiful_image\Edit\icons8-edit-120.png" />
+    <Resource Include="image\beautiful_image\Eye\icons8-eye-96.png" />
+    <Resource Include="image\beautiful_image\icons8-arrowleft-91.png" />
+    <Resource Include="image\beautiful_image\Logout\icons8-logout-80.png" />
+    <Resource Include="image\beautiful_image\Plus\icons8-plus-+-120.png" />
+    <Resource Include="image\beautiful_image\Print\icons8-print-80.png" />
+    <Resource Include="image\beautiful_image\Refresh\icons8-refresh-150.png" />
+    <Resource Include="image\beautiful_image\Search\icons8-search-240.png" />
+    <Resource Include="image\close.png" />
+    <Resource Include="image\eye.png" />
+    <Resource Include="image\file-edit.png" />
+    <Resource Include="image\login.png" />
+    <Resource Include="image\logo.ico" />
+    <Resource Include="image\logo.jpg" />
+    <Resource Include="image\logout.png" />
+    <Resource Include="image\new_logo.jpeg" />
+    <Resource Include="image\plus-box.png" />
+    <Resource Include="image\printer.png" />
+    <Resource Include="image\refresh.png" />
+    <Resource Include="image\search.png" />
+  </ItemGroup>
+
+</Project>

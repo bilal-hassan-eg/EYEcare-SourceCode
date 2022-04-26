@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfApp1.search"
+        WindowStartupLocation ="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="search" Height="923" Width="800">
+    <Border Padding="10" Background="#A7DBD8">
+        <Grid Background="#A7DBD8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="اسم المريض" Grid.Column="3" FontSize="23"/>
+                <TextBox  TextChanged="patient_name_TextChanged" x:Name="patient_name" Grid.Column="2" Width="200" Height="40" FontSize="18" Margin="10,10,50,10"/>
+            </Grid>
+            <Button Content="بحث" Height="50" FontSize="35" Background="#E0E4CC" Click="search_data" Margin="30,5,575,5"/>
+            <ComboBox x:Name="select_type" Grid.Row="1" Width="160" Height="40" SelectionChanged="select_type_SelectionChanged" >
+                <ComboBoxItem FontSize="25" Content="المؤكد" />
+                <ComboBoxItem FontSize="25" Content="الملغي" />
+                <ComboBoxItem FontSize="25" Content="العروض" />
+                <ComboBoxItem FontSize="25" Content="المؤجل" />
+                <ComboBoxItem FontSize="25" Content="غير ذلك" />
+                <ComboBoxItem FontSize="25" Content="كول سنتر 1" />
+                <ComboBoxItem FontSize="25" Content="كول سنتر 2" />
+                <ComboBoxItem FontSize="25" Content="كول سنتر 3" />
+
+            </ComboBox>
+
+            <DataGrid Background="#E0E4CC" FlowDirection="RightToLeft" x:Name="table" Grid.Row="2" FontSize="20" IsReadOnly="True" CanUserAddRows="False"/>
+
+            <Button Content="الصفحة الرئيسية" Grid.Row="4" Height="50" FontSize="35" Background="#E0E4CC" Click="back" Margin="245,10,245,10"/>
+
+        </Grid>
+    </Border>
+</Window>

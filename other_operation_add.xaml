@@ -1,0 +1,69 @@
+﻿<Window x:Class="WpfApp1.other_operation_add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="other_operation_add" Height="378" Width="653">
+    <Grid Background="#A7DBD8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="2.5*" />
+        </Grid.RowDefinitions>
+        <Grid Margin="0,0,0,-6"  Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" FontSize="30" Text="ملاحظات" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right"/>
+            <ComboBox x:Name="combo" Grid.Row="0" Grid.Column="0" Width="200" Height="60" SelectionChanged="type">
+                <ComboBoxItem>جاري الرد</ComboBoxItem>
+                <ComboBoxItem>مغلق</ComboBoxItem>
+                <ComboBoxItem>لم يرد</ComboBoxItem>
+                <ComboBoxItem>غير قادر</ComboBoxItem>
+                <ComboBoxItem>الرقم خطأ</ComboBoxItem>
+                <ComboBoxItem>لا يوجد رقم</ComboBoxItem>
+                <ComboBoxItem>اخري</ComboBoxItem>
+            </ComboBox>
+            <TextBlock x:Name="note_manual_enter_label" Grid.Row="1" Grid.Column="1" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Right" Text="ادخل الملاحظات" />
+            <TextBox x:Name="note_manual_enter_text" Grid.Row="1" Grid.Column="0" Width="300"  Height="70" FontSize="25"/>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Margin="10" Grid.Column="3" x:Name="btn1" BorderThickness="4" FontSize="23"  Background="#E0E4CC"  VerticalAlignment="Center" Height="64" Click="add">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="btn_text" VerticalAlignment="Center">اضافة عملية</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Margin="10" Grid.Column="2"  BorderThickness="4" FontSize="23" Background="#E0E4CC" VerticalAlignment="Center" Height="64" Click="cancel" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  VerticalAlignment="Center">الغاء عملية</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="1" Margin="10" x:Name="btn2"  BorderThickness="4" FontSize="23" Grid.Row="2" Background="#E0E4CC"  VerticalAlignment="Center" Height="64" Click="edit_other">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="btn_text1" VerticalAlignment="Center"><Run FlowDirection="RightToLeft" Language="ar-eg" Text="تعديل"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button  Margin="10,16,10,15" BorderThickness="4"  FontSize="23" Background="#E0E4CC" Click="back" Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="image\beautiful_image\icons8-arrowleft-91.png" Width="56" Height="43"/>
+                    <TextBlock VerticalAlignment="Center" >رجوع</TextBlock>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+    
+</Window>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>G:\eyecare\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Add.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Add_accept_operation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="call_center1_Account.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="call_center_dashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="details_operations_callcenter.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="export.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainAcount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="other_operation_add.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="search.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="show_all.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="show_all_operations.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="show_details.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Add.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Add_accept_operation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="call_center1_Account.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="call_center_dashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="details_operations_callcenter.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="export.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainAcount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="other_operation_add.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="search.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="show_all.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="show_all_operations.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="show_details.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

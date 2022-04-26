@@ -1,0 +1,79 @@
+﻿<Window x:Class="WpfApp1.export"
+        WindowStartupLocation ="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="export" Height="894" Width="700">
+    <Border Background="#A7DBD8">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="2" Content="من" FontSize="20" HorizontalAlignment="Right"/>
+                <Label Grid.Row="0" Grid.Column="1" Content="الي" FontSize="20" HorizontalAlignment="Right"/>
+
+                <TextBox Grid.Row="1" Grid.Column="2" x:Name="from" FontSize="15" />
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="to" FontSize="15" />
+
+                <Button Content="جلب البيانات" Grid.Row="1" FontSize="19" Background="#E0E4CC" Click="get_data" Margin="10,74,10,-74" />
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="35*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="اسم الملف" FontSize="20" Grid.Row="0" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="file_name" FontSize="20" Grid.Row="1" Margin="1"/>
+                </Grid>
+                <ComboBox  Grid.Column="0" SelectionChanged="set_type" Margin="5,-41,110,81" >
+                    <ComboBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ComboBox.RenderTransform>
+                    <ComboBoxItem x:Name="qafla">القوافل</ComboBoxItem>
+                    <ComboBoxItem x:Name="operation">العمليات المؤكدة</ComboBoxItem>
+                    <ComboBoxItem x:Name="delay">العمليات المؤجلة</ComboBoxItem>
+                    <ComboBoxItem x:Name="cancel">العمليات الملغية</ComboBoxItem>
+                    <ComboBoxItem x:Name="show">العروض</ComboBoxItem>
+                    <ComboBoxItem x:Name="other">غير ذلك</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="2" >
+                <DataGrid FlowDirection="RightToLeft" x:Name="table" FontSize="20" IsReadOnly="True" CanUserAddRows="False"/>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Button Content="طباعة" FontSize="40" Margin="10" Background="#E0E4CC" Click="print"/>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Button Content="الصفحة الرئيسية" FontSize="40" Margin="10" Background="#E0E4CC" Click="back"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,75 @@
+﻿<Window x:Class="WpfApp1.show_details"
+        WindowStartupLocation ="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="show_details" Height="800" Width="900">
+
+    <Border Padding="10" Background="#A7DBD8" Margin="0,0,0,-6">
+        <Grid Margin="0,0,0,-10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="494*" />
+                <RowDefinition Height="120*" />
+                <RowDefinition Height="353*"/>
+            </Grid.RowDefinitions>
+            <DataGrid  FlowDirection="RightToLeft" Grid.Row="0" x:Name="table" Background="#E0E4CC" FontSize="20" CanUserAddRows="False" IsReadOnly="True" Height="390" VerticalAlignment="Top" SelectionChanged="Edit_Data" >
+            </DataGrid>
+            <Grid Grid.Row="2" Margin="0,43,0,43">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ListView FontSize="18" x:Name="list" Background="#E0E4CC" Grid.Column="0" Width="280" Height="180" VerticalAlignment="Bottom" HorizontalAlignment="Left" SelectionChanged="list_SelectionChanged"/>
+                <Button Visibility="Collapsed"  FontSize="23" Background="LightYellow" VerticalAlignment="Bottom" Grid.Column="0" Click="refresh" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/image/refresh.png" Width="60"/>
+                        <TextBlock VerticalAlignment="Center">تحديث</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="23" Click="back" Background="#E0E4CC" VerticalAlignment="Bottom"   Grid.Column="1" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="image\beautiful_image\icons8-arrowleft-91.png" Width="60"/>
+                        <TextBlock VerticalAlignment="Center">رجوع للخلف</TextBlock>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid Margin="0,10,0,142" Grid.RowSpan="2" Grid.Row="1" x:Name="grid_select_workspace">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <TextBlock Text="من" Grid.Column="2" Grid.Row="0" FontSize="40" HorizontalAlignment="Right"/>
+                <TextBox  x:Name="from" Margin="10" Grid.Column="2" Grid.Row="1" FontSize="40" BorderThickness="3"/>
+
+                <TextBlock Text="الي" Grid.Column="1" Grid.Row="0" FontSize="40" HorizontalAlignment="Right"/>
+                <TextBox x:Name="to" Margin="10" Grid.Column="1" Grid.Row="1" FontSize="40" BorderThickness="3"/>
+
+                <TextBlock Text="الحساب العامل" Grid.Column="0" Grid.Row="0" FontSize="40" HorizontalAlignment="Right"/>
+                <ComboBox x:Name="work_Account" FontSize="25" Grid.Row="1" Grid.Column="0" Margin="10" Background="Azure" BorderBrush="Azure" BorderThickness="4">
+                    <ComboBoxItem>كول سنتر 1</ComboBoxItem>
+                    <ComboBoxItem>كول سنتر 2</ComboBoxItem>
+                    <ComboBoxItem>كول سنتر 3</ComboBoxItem>
+                </ComboBox>
+
+                <Button FontSize="23" Grid.Column="1"  Grid.Row="2"  Background="#E0E4CC" Click="Add_workspace" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="image\beautiful_image\Plus\icons8-plus-+-120.png" Width="60"/>
+                        <TextBlock VerticalAlignment="Center">اضافة</TextBlock>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
+
+</Window>
